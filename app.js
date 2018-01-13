@@ -52,11 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sumOfNums = a + b + c;
-  var productOfNums = a * b * c;
+  var sum1and2 = sum(a, b)[0];
+  var sumAll = sum(sum1and2, c)[0];
+  var product1and2 = multiply(a, b)[0];
+  var productAll = multiply(product1and2, c)[0];
   var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to 16.';
   var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.';
-  return [sumOfNums, productOfNums, sumMessage, productMessage];
+  return [sumAll, productAll, sumMessage, productMessage];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -110,6 +112,6 @@ function multiplyArray(testArray){ //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(2,3,4);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
