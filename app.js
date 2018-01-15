@@ -52,10 +52,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sum1and2 = sum(a, b)[0];
-  var sumAll = sum(sum1and2, c)[0];
-  var product1and2 = multiply(a, b)[0];
-  var productAll = multiply(product1and2, c)[0];
+  var sumAll = sum((sum(a, b)[0]), c)[0];
+  // var sumAll = sum(sum1and2, c)[0];
+  // var product1and2 = multiply(a, b)[0];
+  var productAll = multiply((multiply(a, b)[0]), c)[0];
   var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to 16.';
   var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is 140.';
   return [sumAll, productAll, sumMessage, productMessage];
@@ -80,8 +80,8 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var sum1and2 = sum(testArray[0], testArray[1])[0];
-  var sumAll = sum(sum1and2, testArray[2])[0];
+  // var sum1and2 = sum(testArray[0], testArray[1])[0];
+  var sumAll = sum((sum(testArray[0], testArray[1])[0]), testArray[2])[0];
   var message = testArray + ' was passed in as an array of numbers, and ' + sumAll + ' is their sum.';
   return [sumAll, message];
 }
@@ -104,8 +104,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  var product1and2 = multiply(testArray[0], testArray[1])[0];
-  var productAll = multiply(product1and2, testArray[2])[0];
+  // var product1and2 = multiply(testArray[0], testArray[1])[0];
+  var productAll = multiply((multiply(testArray[0], testArray[1])[0]), testArray[2])[0];
   var message = 'The numbers ' + testArray + ' have a product of 24.';
   return [productAll, message];
 
